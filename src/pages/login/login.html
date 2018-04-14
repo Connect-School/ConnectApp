@@ -1,0 +1,35 @@
+<ion-content padding>
+
+	<div class="logo"  style='padding: 4em 0 2em 0'>
+		<h1 text-center style='font-weight: 300'>Connect School</h1>
+	</div>
+
+	<ion-list>
+
+	  <ion-item>
+	    <ion-label floating>Usuário</ion-label>
+	    <ion-input type="text"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label floating>Senha</ion-label>
+	    <ion-input type="password"></ion-input>
+	  </ion-item>
+
+	</ion-list>
+
+	<div padding>
+		<ion-grid>
+			<ion-row>
+				<ion-col>
+					<button ion-button outline center (click)="addUser()">Cadastra-se</button>
+				</ion-col>
+				<ion-col>
+					<button ion-button (click)="login()">Entrar</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+
+
+</ion-content>
