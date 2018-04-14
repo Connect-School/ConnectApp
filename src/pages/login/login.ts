@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 
-// import { CadastrarUsuarioPage } from '../cadastrar-usuario/cadastrar-usuario';
+import { CadastrarUsuarioPage } from '../cadastrar-usuario/cadastrar-usuario';
 import { HomePage } from '../home/home';
 
 @IonicPage()
@@ -18,9 +18,9 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-addUser() {
+  addUser() {
     console.log('Add user');
-    // this.nav.push(CadastrarUsuarioPage);
+    this.nav.push(CadastrarUsuarioPage);
   }
 
   login() {

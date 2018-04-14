@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Novo Usuário</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+	<ion-list>
+	  <ion-item>
+	    <ion-label>Usuário</ion-label>
+	    <ion-input type="text"></ion-input>
+	  </ion-item>
+	  <ion-item>
+	    <ion-label>E-mail</ion-label>
+	    <ion-input type="email"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label>Senha</ion-label>
+	    <ion-input type="password"></ion-input>
+	  </ion-item>
+
+	</ion-list>
+
+
+<div padding>
+		<ion-grid>
+			<ion-row>
+				<ion-col>
+					<button ion-button (click)="cancel()">Cancelar</button>
+				</ion-col>
+				<ion-col>
+					<button ion-button (click)="signIn()">Cadastrar</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+
+</ion-content>
