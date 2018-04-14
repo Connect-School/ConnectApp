@@ -24,7 +24,7 @@ export class CadastrarUsuarioPage {
   signIn() {
   	console.log('User added');
 
-  	let toast = this.toastCtrl.create({
+  	const toast = this.toastCtrl.create({
       message: 'Usuário Cadastrado',
       duration: 1500
     });

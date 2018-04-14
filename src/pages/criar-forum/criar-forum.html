@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>Criar novo Fórum</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancelar</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+   	
+	<ion-item>
+      <ion-label>Tipo de fórum</ion-label>
+      <ion-select [(ngModel)]="messageType">
+        <ion-option value="sujestao">Sujestão</ion-option>
+        <ion-option value="reclamacao">Reclamação</ion-option>
+        <ion-option value="soliticao">Solicitação</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Título</ion-label>
+      <ion-input type="textarea"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Descrição</ion-label>
+      <ion-input type="textarea"></ion-input>
+    </ion-item>
+
+    <div padding>
+      <button ion-button outline block (click)="create()">Criar</button>
+    </div>
+
+  </ion-list>
+
+</ion-content>

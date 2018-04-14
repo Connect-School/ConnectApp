@@ -4,15 +4,45 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title text-center>Início</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
         <ion-icon name="person"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons> -->
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3 text-center padding-top>Bem vindo ao ConnectSchool</h3>
+
+  <h4 text-center padding-top style='font-weight: 300'>Ultimas notificações</h4>
+
+  <ion-card *ngFor="let alert of alerts">
+    <ion-card-header>
+      {{alert.title}}
+    </ion-card-header>
+    <ion-card-content>
+      {{alert.text}}
+    </ion-card-content>
+  </ion-card>
+
+  <h4 text-center padding-top style='font-weight: 300'>Fóruns</h4>
+
+  <ion-card *ngFor="let forum of foruns" (click)="itemTapped($event, forum)">
+    <ion-card-header>
+      {{forum.title}}
+    </ion-card-header>
+    <ion-card-content>
+      {{forum.description}}
+      <hr>
+      <ion-row>
+        <ion-col>
+          <span text-center>{{forum.amount}} mensagens</span>
+        </ion-col>
+        <ion-col>
+          <span text-center>{{forum.type}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

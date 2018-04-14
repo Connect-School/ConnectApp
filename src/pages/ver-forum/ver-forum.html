@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>{{selectedItem.title}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addForumMessage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<div padding-bottom>
+		<h4 style="font-weight: 300; font-size: 1.5rem">{{selectedItem.title}}</h4>
+		<h5 style="font-weight: 300; font-size: 1.3rem">{{selectedItem.description}}</h5>
+		<ion-row>
+			<ion-col>
+				<h6 style="font-weight: 300; font-size: 1.2rem;" text-left>Responsável: {{selectedItem.admin}}</h6>
+			</ion-col>
+			<ion-col>
+				<h6 style="font-weight: 300; font-size: 1.2rem;" text-right>Criador: {{selectedItem.username}}</h6>
+			</ion-col>
+		</ion-row>
+		<hr>
+	</div>
+
+	<ion-card *ngFor="let message of forumMessages">
+	  <ion-card-content>
+	    <p>{{message.text}}</p>
+	    <hr>
+	    <h6 float-left style="font-size: 1rem;">{{message.createdDate}}</h6>
+	    <h6 float-right style="font-size: 1rem">{{message.username}}</h6>
+	  </ion-card-content>
+	</ion-card>
+
+</ion-content>

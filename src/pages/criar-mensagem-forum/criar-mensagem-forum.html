@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>Criar nova Mensagem</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancelar</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+   	
+    <ion-item>
+      <ion-label>Texto</ion-label>
+      <ion-input type="textarea"></ion-input>
+    </ion-item>
+
+    <div padding>
+      <button ion-button outline block (click)="create()">Enviar</button>
+    </div>
+
+  </ion-list>
+
+</ion-content>

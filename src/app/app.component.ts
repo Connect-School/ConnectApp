@@ -6,6 +6,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage} from '../pages/login/login';
+import { MensagemPage } from '../pages/mensagem/mensagem';
+import { ForumPage } from '../pages/forum/forum';
+import { BullyingPage } from '../pages/bullying/bullying';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,18 +18,18 @@ export class MyApp {
 
   // rootPage: any = HomePage;
   rootPage: any = LoginPage;
-
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'Sair', component: LoginPage },
-
+      { title: 'Início', component: HomePage, icon: 'ios-home' },
+      { title:  'Mensagem', component: MensagemPage, icon: 'ios-mail'},
+      { title: 'Denunciar Bullying', component: BullyingPage, icon: 'ios-alert' },
+      { title: 'Forum', component: ForumPage, icon: 'ios-folder' },
+      { title: 'Sair', component: LoginPage, icon: 'ios-exit' }
     ];
 
   }

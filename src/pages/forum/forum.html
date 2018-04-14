@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>Fórum</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addForum()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-card *ngFor="let forum of foruns" (click)="itemTapped($event, forum)">
+    <ion-card-header>
+      {{forum.title}}
+    </ion-card-header>
+    <ion-card-content>
+      {{forum.description}}
+      <ion-row>
+      	<hr>
+        <ion-col>
+          <span text-center>{{forum.amount}} mensagens</span>
+        </ion-col>
+        <ion-col>
+        	<span >{{forum.createdDate}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

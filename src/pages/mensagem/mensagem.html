@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>Mensagem</ion-title>
+     <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="addMessage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-card *ngFor="let message of messages">
+	  <ion-card-header>
+	    {{message.title}}
+	  </ion-card-header>
+	  <ion-card-content>
+	    {{message.text}}
+	  </ion-card-content>
+	</ion-card>
+
+</ion-content>

@@ -8,6 +8,14 @@ import { ListPage } from '../pages/list/list';
 
 import { LoginPage } from '../pages/login/login';
 import { CadastrarUsuarioPage } from '../pages/cadastrar-usuario/cadastrar-usuario';
+import { MensagemPage } from '../pages/mensagem/mensagem';
+import { CriarMensagemPage } from '../pages/criar-mensagem/criar-mensagem';
+import { ForumPage } from '../pages/forum/forum';
+import { CriarForumPage } from '../pages/criar-forum/criar-forum';
+import { VerForumPage } from '../pages/ver-forum/ver-forum';
+import { CriarMensagemForumPage } from '../pages/criar-mensagem-forum/criar-mensagem-forum';
+import { BullyingPage } from '../pages/bullying/bullying';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,7 +26,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     LoginPage,
-    CadastrarUsuarioPage
+    CadastrarUsuarioPage,
+    MensagemPage,
+    CriarMensagemPage,
+    ForumPage,
+    CriarForumPage,
+    VerForumPage,
+    CriarMensagemForumPage,
+    BullyingPage 
   ],
   imports: [
     BrowserModule,
@@ -30,7 +45,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     LoginPage,
-    CadastrarUsuarioPage
+    CadastrarUsuarioPage,
+    MensagemPage,
+    CriarMensagemPage,
+    ForumPage,
+    CriarForumPage,
+    VerForumPage,
+    CriarMensagemForumPage,
+    BullyingPage
   ],
   providers: [
     StatusBar,
